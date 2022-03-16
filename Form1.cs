@@ -30,7 +30,13 @@ namespace FilediTesto
             result += htmlGenera.close();
             return result;
             //Chiusura dell'html
-            
+        }
+        
+
+        private void btnCreaDirectory_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(gestioneFile.creazioneCartella(@"C:\Users\Facep\source\repos\Fabio\giorgio\pippo\"));
+            gestioneFile.creazioneCartella(@"C:\Users\Facep\source\repos\Fabio\giorgio\pippo\");
         }
     }
 }

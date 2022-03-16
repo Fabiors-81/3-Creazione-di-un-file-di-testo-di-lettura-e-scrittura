@@ -36,5 +36,45 @@ namespace FilediTesto
             StreamReader sr = new StreamReader(pathFile);
             return sr.ReadToEnd();
         }
-    }
+        public string creazioneCartella(string pathDirectory)
+        {
+            string result = "";
+            if (!System.IO.Directory.Exists(pathDirectory))
+            {
+                try
+                {
+                    System.IO.Directory.CreateDirectory(pathDirectory);
+                    result = "La directory è stata creata";
+                }
+                catch (System.IO.DirectoryNotFoundException)
+                {
+                    result = "Il drive non è stato trovato";
+                }
+                catch (Exception ex)
+                {
+                    result = ex.Message;
+                }
+            }
+            else
+            {
+                result = "La directory esiste già";
+            }
+            return result;
+        }
+        public void creazioneCartella(string pathDirectory, string perUsoInterno = "")
+        {
+            if (!System.IO.Directory.Exists(pathDirectory))
+            {
+                try
+                {
+                    System.IO.Directory.CreateDirectory(pathDirectory);
+                }
+                catch (Exception ex)
+                {
+
+                }
+            }
+            
+        }
+    } 
 }

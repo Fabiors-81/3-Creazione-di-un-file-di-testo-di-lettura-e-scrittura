@@ -31,6 +31,7 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.btnCreaDirectory = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox1
@@ -60,11 +61,22 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // btnCreaDirectory
+            // 
+            this.btnCreaDirectory.Location = new System.Drawing.Point(293, 301);
+            this.btnCreaDirectory.Name = "btnCreaDirectory";
+            this.btnCreaDirectory.Size = new System.Drawing.Size(297, 58);
+            this.btnCreaDirectory.TabIndex = 3;
+            this.btnCreaDirectory.Text = "crea Directory";
+            this.btnCreaDirectory.UseVisualStyleBackColor = true;
+            this.btnCreaDirectory.Click += new System.EventHandler(this.btnCreaDirectory_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(17F, 41F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(908, 450);
+            this.Controls.Add(this.btnCreaDirectory);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.textBox1);
@@ -80,5 +92,6 @@
         private TextBox textBox1;
         private Button button1;
         private Button button2;
+        private Button btnCreaDirectory;
     }
 }
